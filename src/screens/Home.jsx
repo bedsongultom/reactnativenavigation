@@ -13,17 +13,25 @@ export default class Home extends Component{
     onPressAccount=()=>{
         this.props.navigation.navigate('Accounts');
     }
+    onPressHome=()=>{
+        this.props.navigation.navigate('Home');
+    }
     
     render(){
         return(
             <Fragment>
                 <View style={styles.container}>
-                    <Text style={styles.title}>Home</Text>
-                    <TouchableOpacity 
+                <TouchableOpacity style={styles.button}
+                        onPress={this.onPressHome}>
+                        <Text style={styles.title}>Home</Text>
+                    </TouchableOpacity>
+                    
+                    <TouchableOpacity style={styles.button}
                         onPress={this.onPressCart}>
                         <Text style={styles.title}>Cart</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity 
+                   
+                    <TouchableOpacity style={styles.button}
                         onPress={this.onPressAccount}>
                         <Text style={styles.title}>Accounts</Text>
                     </TouchableOpacity>
@@ -42,13 +50,28 @@ const styles = StyleSheet.create({
 
     }, 
     title: {
-        fontSize: 12,
         fontWeight: 'bold',
-        color: 'orange',
+        color: 'white',
         fontWeight: 'bold',
-        fontFamily: 'BaiJamjuree-Bold',
         alignSelf: 'center',
-      }
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+
+    button:{
+        padding: 0,
+        borderColor: 'orange',
+        backgroundColor:'orange',
+        borderWidth: 1,
+        borderRadius:10,
+        height:30,
+        width: 250,
+        alignSelf: 'center',
+        marginTop:10,
+        justifyContent: 'center',
+        alignItems: 'center'
+    }  
+    
 });
 
 

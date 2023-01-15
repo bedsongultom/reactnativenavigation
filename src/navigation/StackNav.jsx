@@ -11,7 +11,7 @@ const screenOptionStyle = {
         headerStyle: {
             backgroundColor: "#fff",
         },
-        headerTintColor: "#FF6F00",
+        headerTintColor: "#000",
         headerBackTile:   "Back",
 };
 
